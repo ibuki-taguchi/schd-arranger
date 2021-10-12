@@ -62,6 +62,8 @@ var indexRouter = require("./routes/index");
 var loginRouter = require("./routes/login");
 var logoutRouter = require("./routes/logout");
 var schdRouter = require("./routes/schd");
+var availabilitiesRouter = require("./routes/avb");
+var commentsRouter = require("./routes/cmt");
 var app = express();
 app.use(helmet());
 
@@ -89,6 +91,8 @@ app.use("/", indexRouter);
 app.use("/login", loginRouter);
 app.use("/logout", logoutRouter);
 app.use("/schedules", schdRouter);
+app.use("/schedules", availabilitiesRouter);
+app.use("/schedules", commentsRouter);
 
 app.get(
   "/auth/github",
