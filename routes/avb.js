@@ -1,7 +1,7 @@
 "use strict";
 const express = require("express");
 const router = express.Router();
-const authenticationEnsurer = require("./auth-ensurer");
+const authenticationEnsurer = require("./auth-Ensurer");
 const Availability = require("../models/avb");
 
 router.post(
